@@ -1,0 +1,23 @@
+// 0-600   phone
+// 600-900     tablet-portret
+// 900-1200    tablet-landscape
+// 1200 - 1800     desktop
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media screen and (max-width: 60em) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media screen and (max-width: 90em) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media screen and (max-width: 120em) {
+            @content;
+        }
+    }
+}
